@@ -10,9 +10,9 @@ jean-sebastien.dieu@cfm.fr
 
 - You are a Python developer.
 - Expectations: 
- - Implement a resource critical function (primality check)
- - Minimum memory consumption
- - A call does not last more than a few milliseconds 
+   - Implement a resource critical function (primality check)
+   - Minimum memory consumption
+   - A call does not last more than a few milliseconds 
 
 ---
 
@@ -22,7 +22,7 @@ jean-sebastien.dieu@cfm.fr
 * How do we monitor the resource consumption? <!-- .element: class="fragment" data-fragment-index="2" -->
 * How do we compare resource usage between runs? <!-- .element: class="fragment" data-fragment-index="3" -->
 * If we rely on a third party, how can we check its evolution? <!-- .element: class="fragment" data-fragment-index="4" -->
-* Optionally, how can we check such requirements from CI? <!-- .element: class='fragment" data-fragment-index="5" -->
+* Optionally, how can we check such requirements from CI? <!-- .element: class="fragment" data-fragment-index="5" -->
 
 ---
 ##### Initial attempt
@@ -40,8 +40,8 @@ def test_prime(n):
 ```
 
 - Basic <!-- .element: class="fragment" data-fragment-index="1" -->
-- time check with timeit is a working (but poor) assessment <!-- .element: class="fragment" data-fragment-index="2" -->
-- memory usage is not provided out of the box for our test. <!-- .element: class="fragment" data-fragment-index="3" -->
+- *timeit* to assess time is a working (but poor) method<!-- .element: class="fragment" data-fragment-index="2" -->
+- memory usage is not an out of the box feature <!-- .element: class="fragment" data-fragment-index="5" -->
 
 ---
  ## Pytest-monitor
@@ -61,12 +61,12 @@ def test_prime(n):
 ---
 ##### Let's add it!
 
-With conda:
+- With conda:
 ```bash
 (my_package_conda_devel) bash $> conda install pytest-monitor -c https://conda.anaconda.org/conda-forge
 ```
 
-With pip
+- With pip
 ```bash
 (my_package_venv) bash $> pip install pytest-monitor
 ``` 
