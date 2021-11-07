@@ -17,7 +17,7 @@ jean-sebastien.dieu@cfm.fr
 
 ##### Questions 
 
-* How can we prove the algorithm performs adequatly?
+* How can we prove our algorithm performs adequatly?
 * How do we monitor the resource consumption? <!-- .element: class="fragment" data-fragment-index="1" -->
 * How do we compare resource usage between runs? <!-- .element: class="fragment" data-fragment-index="2" -->
 * If we rely on a third party, how can we check its evolution? <!-- .element: class="fragment" data-fragment-index="3" -->
@@ -120,15 +120,15 @@ Leverage pytest-monitor with 2 building blocks:
 
  - API (Python)
    * dedicated to query and fetch your data
-   * works seemlessly with a local pytest-monitor database
+   * handle locals monitor databases as well!
 ---
 ##### About (2/2)
 
 Leverage pytest-monitor with 2 building blocks:
 
  - Server (REST)
-   * manage a dedicated storage (through REST API) to insert metrics
-   * enable parallelism in your test session (xdist support)
+   * manage a dedicated storage to insert metrics
+   * enable parallelism in your test session 
 
 ---
 
@@ -146,7 +146,7 @@ plugins: monitor-1.6.2
 collected 5 items
 tests/test_primality.py .....                         [ 100%]
 
-==================== 5 passed 20.13 seconds =================
+==================== 5 passed 20.14 seconds =================
 ```
 
 ---
