@@ -73,7 +73,8 @@ def test_prime(n):
 ---
 ##### Results
 
-- Let's run it...
+- Let's run ...
+
 ```bash
 (my_conda_env) bash $> pytest --tag algo=naive --db monitor.db
 
@@ -86,6 +87,7 @@ tests/test_primality.py .....                         [ 100%]
 
 =================== 5 passed 20.13 seconds ==================
 ```
+
 - No code change required <!-- .element: class="fragment" data-fragment-index="2" -->
 ---
 
