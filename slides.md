@@ -22,7 +22,6 @@ jean-sebastien.dieu@cfm.fr
 * How do we monitor the resource consumption? <!-- .element: class="fragment" data-fragment-index="1" -->
 * How do we compare resource usage between runs? <!-- .element: class="fragment" data-fragment-index="2" -->
 * If we rely on a third party, how can we check its evolution? <!-- .element: class="fragment" data-fragment-index="3" -->
-* Optionally, how can we check such requirements from CI? <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 ##### Initial attempt 
@@ -75,7 +74,7 @@ def test_prime(n):
 ---
 ##### Results
 
-Let's run it...
+- Let's run it...
 ```bash
 (my_conda_env) bash $> pytest --tag algo=naive --db monitor.db
 
@@ -88,6 +87,7 @@ tests/test_primality.py .....                         [ 100%]
 
 =================== 5 passed 20.13 seconds ==================
 ```
+- No code change required <!-- .element: class="fragment" data-fragment-index="2" -->
 ---
 
 ##### Fetch data
