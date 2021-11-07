@@ -25,11 +25,11 @@ jean-sebastien.dieu@cfm.fr
 * Optionally, how can we check such requirements from CI? <!-- .element: class="fragment" data-fragment-index="5" -->
 
 ---
-##### Initial attempt
+##### Initial attempt <!-- .element: class="fragment" data-fragment-index="1" -->
 
-With pytest, our test might look like:
+With pytest, our test might look like: <!-- .element: class="fragment" data-fragment-index="1" -->
 
-```python [1-7]
+```python [1-7] <!-- .element: class="fragment" data-fragment-index="1" -->
 import pytest
 from my_package import is_prime
 
@@ -39,9 +39,9 @@ def test_prime(n):
     assert is_prime(n)
 ```
 
-- Basic <!-- .element: class="fragment" data-fragment-index="1" -->
-- *timeit* to assess time is a working (but poor) method<!-- .element: class="fragment" data-fragment-index="2" -->
-- memory usage is not an out of the box feature <!-- .element: class="fragment" data-fragment-index="5" -->
+- Basic <!-- .element: class="fragment" data-fragment-index="2" -->
+- *timeit* to assess time is a working (but poor) method <!-- .element: class="fragment" data-fragment-index="3" -->
+- memory usage is not an out of the box feature <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
  ## Pytest-monitor
