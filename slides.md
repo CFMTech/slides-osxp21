@@ -76,7 +76,7 @@ def test_prime(n):
 - Let's run ...
 
 ```bash
-(my_conda_env) bash $> pytest --tag algo=naive --db monitor.db
+(my_conda_env) bash $> pytest --tag algo=sqrt --db monitor.db
 
 ==================== test session starts ====================
 platform linux -- Python 3.6.8, pytest-4.4.1, py-1.8.0, [...]
@@ -85,7 +85,7 @@ plugins: monitor-1.6.2
 collected 5 items
 tests/test_primality.py .....                         [ 100%]
 
-=================== 5 passed 20.13 seconds ==================
+=================== 5 passed 70.35 seconds ==================
 ```
 
 - No code change required <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -136,7 +136,7 @@ Leverage pytest-monitor with 2 building blocks:
 
 ```bash
 (my_conda_env) bash $> export URL=http://my.monitor.org/api/v1
-(my_conda_env) bash $> pytest --remote $URL --tag algo=naive \
+(my_conda_env) bash $> pytest --remote $URL --tag algo=sqrt \
                        --db monitor.db
 
 ===================== test session starts ===================
@@ -146,7 +146,7 @@ plugins: monitor-1.6.2
 collected 5 items
 tests/test_primality.py .....                         [ 100%]
 
-==================== 5 passed 20.14 seconds =================
+==================== 5 passed 70.36 seconds =================
 ```
 
 ---
