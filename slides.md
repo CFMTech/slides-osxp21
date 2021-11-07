@@ -217,17 +217,17 @@ df = metrics.to_df(sessions,
 
 --- ---
 
-# Use Cases
+# Other Use Cases
 
 ---
 
 ### Know your dependencies
 
- - Migrating a dependencies (e.g.: pandas) can lead to
+ - Migrating a dependencies (e.g.: pandas) can lead to <!-- .element class="fragment" data-fragment-index="1" -->
    - behavioral change
    - performance degradation on your core features
  
- - Tracking your application’s resource footprint can
+ - Tracking your application’s resource footprint can <!-- .element class="fragment" data-fragment-index="2" -->
    - prevent unwanted resource consumption
    - help you validate your requirements's version
 
@@ -235,11 +235,11 @@ df = metrics.to_df(sessions,
 
 ### Know your tests
 
- - Applying load to a system can harm the performances
- - Analyzing resources can 
-    - provide comprehensive view of tests and their category
-    - help determining problems
-    - validate new dev
+ - Applying load to a system can harm performances <!-- .element class="fragment" data-fragment-index="1" -->
+ - Analyzing resources can <!-- .element class="fragment" data-fragment-index="2" -->
+    - provide comprehensive view of tests and their category <!-- .element class="fragment" data-fragment-index="2" -->
+    - help you determining problems <!-- .element class="fragment" data-fragment-index="2" -->
+    - validate new dev <!-- .element class="fragment" data-fragment-index="3" -->
 
 --- ---
 ### Questions?
