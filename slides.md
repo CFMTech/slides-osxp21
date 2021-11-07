@@ -63,34 +63,34 @@ def test_prime(n):
 
 - With conda:
 ```bash
-(my_package_conda_devel) bash $> conda install pytest-monitor -c https://conda.anaconda.org/conda-forge
+(my_conda_env) bash $> conda install pytest-monitor -c https://conda.anaconda.org/conda-forge
 ```
 
 - With pip
 ```bash
-(my_package_venv) bash $> pip install pytest-monitor
+(my_venv) bash $> pip install pytest-monitor
 ``` 
 
 ---
 ##### Results
 
 Let's run it...
-```
-(my_package_conda_devel) bash $> pytest --tag algo=naive --db monitor.db
+```bash
+(my_conda_env) bash $> pytest --tag algo=naive --db monitor.db
 
-======================== test session starts ========================
-platform linux -- Python 3.6.8, pytest-4.4.1, py-1.8.0, pluggy-0.11.0
-rootdir: /home/jdieu/projects/ospoxp/pytest-monitor
+==================== test session starts ====================
+platform linux -- Python 3.6.8, pytest-4.4.1, py-1.8.0, [...]
+rootdir: /home/user/projects/ospoxp/pytest-monitor
 plugins: monitor-1.6.2
 collected 5 items
-test/test_primality.py .....                              [ 100%]
+tests/test_primality.py .....                         [ 100%]
 
-======================= 5 passed 20.13 seconds ======================
+=================== 5 passed 20.13 seconds ==================
 ```
 ---
 
 ##### Fetch data
-```soql
+```sql
 sqlite> SELECT ITEM_VARIANT, MEM_USAGE, TOTAL_TIME, USER_TIME, KERNEL_TIME, CPU_USAGE, ITEM_PATH
    ...> FROM TEST_METRICS
    ...> WHERE ITEM_VARIANT = 'test_prime[982451653]';
@@ -102,6 +102,10 @@ test_prime[982451653]|0.55078125|68.6835398674011|68.148762272|0.08830408|0.9934
 test_prime[982451653]|0.7109375|33.8781900405884|33.681455904|0.007393368|0.994411130926371|test_prime
 test_prime[982451653]|0.6953125|0.205749034881592|0.01341024|0.003311496|0.0812724881534601|test_prime
 ```
+
+- Great, mission acomplished <!-- .element: class="fragment" data-fragment-index="1" -->
+- Requires to know the sql structure <!-- .element: class="fragment" data-fragment-index="2" -->
+- Does not support parallelism <!-- .element: class="fragment" data-fragment-index="3" -->
 
 --- ---
  ## Monitor-server-API
@@ -126,17 +130,19 @@ Leverage pytest-monitor with 2 building blocks:
 
 ##### Full integration
 
-```
-bash $> pytest --remote $URL --tag demo=yes --tag talk=ospo
+```bash
+(my_conda_env) bash $> export URL=http://my.monitor.org/api/v1
+(my_conda_env) bash $> pytest --remote $URL --tag algo=naive \
+                       --db monitor.db
 
-======================== test session starts ========================
-platform linux -- Python 3.6.8, pytest-4.4.1, py-1.8.0, pluggy-0.11.0
-rootdir: /home/jdieu/projects/perso/pytest-monitor
+===================== test session starts ===================
+platform linux -- Python 3.6.8, pytest-4.4.1, py-1.8.0, [...]
+rootdir: /home/user/projects/ospoxp/pytest-monitor
 plugins: monitor-1.6.2
 collected 5 items
-test/test_primality.py .....                              [ 100%]
+tests/test_primality.py .....                         [ 100%]
 
-======================= 5 passed 20.13 seconds ======================
+==================== 5 passed 20.13 seconds =================
 ```
 
 ---
