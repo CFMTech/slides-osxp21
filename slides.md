@@ -8,11 +8,10 @@ jean-sebastien.dieu@cfm.fr
 
 ##### Context
 
-- You are a Python developer.
-- Expectations: <!-- .element: class="fragment" data-fragment-index="1" -->
-   - Implement a resource critical function (primality check )<!-- .element: class="fragment" data-fragment-index="1" -->
-   - Minimum memory consumption <!-- .element: class="fragment" data-fragment-index="2" -->
-   - A call does not last more than a few milliseconds <!-- .element: class="fragment" data-fragment-index="3" -->
+- We are a Python developer.
+- Implement a resource critical function <!-- .element: class="fragment" data-fragment-index="1" -->
+   - Lower memory consumption <!-- .element: class="fragment" data-fragment-index="2" -->
+   - Calls do not last more than a few tenth of a seconds <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
 
@@ -185,10 +184,23 @@ df = metrics.to_df(sessions,
     <img src='ptm_wall.png'>
   </div>
   <div class="col">
-    <img src='ptm_wall_mem.png'>
-  </div>
-  <div class="col">
     <img src='ptm_mem.png'>
+  </div>
+</div>
+
+---
+
+##### Example, Visualization
+<style>.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+<div class="container">
+  <div class="col">
+    <img src='ptm_wall_mem.png'>
   </div>
 </div>
 
