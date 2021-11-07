@@ -6,28 +6,28 @@ jean-sebastien.dieu@cfm.fr
 
 --- ---
 
-##### Context <!-- .element: class="fragment" data-fragment-index="1" -->
+##### Context
 
-- You are a Python developer. <!-- .element: class="fragment" data-fragment-index="1" -->
-- Expectations: <!-- .element: class="fragment" data-fragment-index="2" -->
-   - Implement a resource critical function (primality check )<!-- .element: class="fragment" data-fragment-index="2" -->
-   - Minimum memory consumption <!-- .element: class="fragment" data-fragment-index="3" -->
-   - A call does not last more than a few milliseconds <!-- .element: class="fragment" data-fragment-index="4" -->
-
----
-
-##### Questions <!-- .element: class="fragment" data-fragment-index="1" -->
-
-* How can we prove the algorithm performs adequatly? <!-- .element: class="fragment" data-fragment-index="1" -->
-* How do we monitor the resource consumption? <!-- .element: class="fragment" data-fragment-index="2" -->
-* How do we compare resource usage between runs? <!-- .element: class="fragment" data-fragment-index="3" -->
-* If we rely on a third party, how can we check its evolution? <!-- .element: class="fragment" data-fragment-index="4" -->
-* Optionally, how can we check such requirements from CI? <!-- .element: class="fragment" data-fragment-index="5" -->
+- You are a Python developer.
+- Expectations: <!-- .element: class="fragment" data-fragment-index="1" -->
+   - Implement a resource critical function (primality check )<!-- .element: class="fragment" data-fragment-index="1" -->
+   - Minimum memory consumption <!-- .element: class="fragment" data-fragment-index="2" -->
+   - A call does not last more than a few milliseconds <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
-##### Initial attempt <!-- .element: class="fragment" data-fragment-index="1" -->
 
-- With pytest, our test might look like: <!-- .element: class="fragment" data-fragment-index="1" -->
+##### Questions 
+
+* How can we prove the algorithm performs adequatly?
+* How do we monitor the resource consumption? <!-- .element: class="fragment" data-fragment-index="1" -->
+* How do we compare resource usage between runs? <!-- .element: class="fragment" data-fragment-index="2" -->
+* If we rely on a third party, how can we check its evolution? <!-- .element: class="fragment" data-fragment-index="3" -->
+* Optionally, how can we check such requirements from CI? <!-- .element: class="fragment" data-fragment-index="4" -->
+
+---
+##### Initial attempt 
+
+- With pytest, our test might look like:
 
 ```python [1-7]
 import pytest
@@ -39,9 +39,9 @@ def test_prime(n):
     assert is_prime(n)
 ```
 
-- Basic <!-- .element: class="fragment" data-fragment-index="2" -->
-- timeit to assess time is a working (but poor) method <!-- .element: class="fragment" data-fragment-index="3" -->
-- memory usage is not an out of the box feature <!-- .element: class="fragment" data-fragment-index="4" -->
+- Basic <!-- .element: class="fragment" data-fragment-index="1" -->
+- timeit to assess time is a working (but poor) method <!-- .element: class="fragment" data-fragment-index="2" -->
+- memory usage is not an out of the box feature <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
  ## Pytest-monitor
