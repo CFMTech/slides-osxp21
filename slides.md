@@ -113,7 +113,7 @@ test_prime[982451653]|test_prime|0.6953125|0.0812724881534601|0.205749034881592|
 --- ---
  ## Monitor-server-API
 ---
-##### About
+##### About (1/2)
 
 Leverage pytest-monitor with 2 building blocks:
 
@@ -121,7 +121,7 @@ Leverage pytest-monitor with 2 building blocks:
    * dedicated to query and fetch your data
    * works seemlessly with a local pytest-monitor database
 ---
-##### About
+##### About (2/2)
 
 Leverage pytest-monitor with 2 building blocks:
 
@@ -155,10 +155,15 @@ tests/test_primality.py .....                         [ 100%]
 
 ```python
 from monitor_server_api import Monitor, Field
+import os
 
-mon = Monitor('http://my-monitor-server.org/api/v1')
+def keep_test_prime_982451653(data):
+    return data.variant == 'test_prime_982451653'
+
+mon = Monitor(os.environ['URL'])
 sessions = mon.list_sessions()
 metrics = mon.list_metrics_from(sessions)
+metrics = metrics.filter_with(keep_test_prime_982451653)
 df = metrics.to_df(sessions,
                    keep=[Field.ITEM_VARIANT, Field.TOTAL_TIME,
                          Field.ITEM_START_TIME, Field.MEM_USAGE,
@@ -166,6 +171,8 @@ df = metrics.to_df(sessions,
 
 ```
 ---
+
+##### Example, Visualization
 <style>.container{
     display: flex;
 }
@@ -178,6 +185,9 @@ df = metrics.to_df(sessions,
     <img src='ptm_wall.png'>
   </div>
   <div class="col">
+    <img src='ptm_wall_mem.png'>
+  </div>
+  <div class="col">
     <img src='ptm_mem.png'>
   </div>
 </div>
@@ -187,9 +197,9 @@ df = metrics.to_df(sessions,
 ##### conclusion
 
 * Easy to fetch and plot data
-* No need to worry about internal data model
-* Enables parallelism
-* Perfect companion to pytest-monitor :)
+* No need to worry about internal data model <!-- .element class="fragment" data-fragment-index="1" -->
+* Enables parallelism <!-- .element class="fragment" data-fragment-index="2" -->
+* Perfect companion to pytest-monitor :) <!-- .element class="fragment" data-fragment-index="3" -->
 
 --- ---
 
@@ -239,6 +249,4 @@ df = metrics.to_df(sessions,
 └─────────────────┘                └────────────────┘
 ```
 
-
-                     
 ---
