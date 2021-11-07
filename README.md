@@ -2,7 +2,7 @@
 
 Slides for Pytest-monitor presentation at Open Source Experience on Nov 9th, 2021
 
-Available on [GitHub Pages](https://flzara.github.io/pytest-monitor-osxp21-slides).
+Available on [GitHub Pages](https://cfmtech.github.io/slides-osxp21/).
 
 Based on [reveal.js](https://revealjs.com/)
 
@@ -10,7 +10,7 @@ Based on [reveal.js](https://revealjs.com/)
 
 ```bash
 $ git clone https://github.com/VisualComputing/colors.git
-$ git checkout gh-pages
+$ git checkout main
 ```
 
 - File to edit : [slides en markdown](slides.md)
