@@ -6,13 +6,13 @@ jean-sebastien.dieu@cfm.fr
 
 --- ---
 
-##### Context
+##### Context <!-- .element: class="fragment" data-fragment-index="1" -->
 
-- You are a Python developer.
-- Expectations: 
-   - Implement a resource critical function (primality check)
-   - Minimum memory consumption
-   - A call does not last more than a few milliseconds 
+- You are a Python developer. <!-- .element: class="fragment" data-fragment-index="1" -->
+- Expectations: <!-- .element: class="fragment" data-fragment-index="2" -->
+   - Implement a resource critical function (primality check )<!-- .element: class="fragment" data-fragment-index="2" -->
+   - Minimum memory consumption <!-- .element: class="fragment" data-fragment-index="3" -->
+   - A call does not last more than a few milliseconds <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
@@ -27,9 +27,9 @@ jean-sebastien.dieu@cfm.fr
 ---
 ##### Initial attempt <!-- .element: class="fragment" data-fragment-index="1" -->
 
-With pytest, our test might look like: <!-- .element: class="fragment" data-fragment-index="1" -->
+- With pytest, our test might look like: <!-- .element: class="fragment" data-fragment-index="1" -->
 
-```python [1-7] <!-- .element: class="fragment" data-fragment-index="1" -->
+```python [1-7]
 import pytest
 from my_package import is_prime
 
@@ -40,7 +40,7 @@ def test_prime(n):
 ```
 
 - Basic <!-- .element: class="fragment" data-fragment-index="2" -->
-- *timeit* to assess time is a working (but poor) method <!-- .element: class="fragment" data-fragment-index="3" -->
+- timeit to assess time is a working (but poor) method <!-- .element: class="fragment" data-fragment-index="3" -->
 - memory usage is not an out of the box feature <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
@@ -63,7 +63,8 @@ def test_prime(n):
 
 - With conda:
 ```bash
-(my_conda_env) bash $> conda install pytest-monitor -c https://conda.anaconda.org/conda-forge
+(my_conda_env) bash $> export CHANNEL="https://conda.anaconda.org/conda-forge"
+(my_conda_env) bash $> conda install pytest-monitor -c ${CHANNEL}
 ```
 
 - With pip
