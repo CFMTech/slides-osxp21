@@ -3,6 +3,7 @@
 Jean-Sébastien Dieu, Architect @ [CFM](https://www.cfm.fr)
 
 jean-sebastien.dieu@cfm.fr
+github @js-dieu
 
 --- ---
 
@@ -241,6 +242,13 @@ df = metrics.to_df(sessions,
     - validate new dev <!-- .element class="fragment" data-fragment-index="3" -->
 
 --- ---
+### More infos
+
+- pytest-monitor: https://github.com/CFMTech/pytest-monitor
+- monitor-server-api: https://github.com/CFMTech/monitor-server-api
+- slides: https://github.com/CFMTech/slides-osxp21
+
+---
 ### Questions?
 --- ---
 ### Addendum
