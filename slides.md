@@ -234,10 +234,10 @@ df = metrics.to_df(sessions,
 
 ### Know your tests
 
- - Applying load to a system can harm performances <!-- .element class="fragment" data-fragment-index="1" -->
- - Analyzing resources can <!-- .element class="fragment" data-fragment-index="2" -->
+ - Applying unnecessary load to a system can harm performances <!-- .element class="fragment" data-fragment-index="1" -->
+    - This applies to CI too! <!-- .element class="fragment" data-fragment-index="1" -->
+ - Analyzing/Checking resources can <!-- .element class="fragment" data-fragment-index="2" -->
     - provide comprehensive view of tests and their category <!-- .element class="fragment" data-fragment-index="2" -->
-    - help you determining problems <!-- .element class="fragment" data-fragment-index="2" -->
     - validate new dev <!-- .element class="fragment" data-fragment-index="3" -->
 
 --- ---
