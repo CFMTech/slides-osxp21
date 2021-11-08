@@ -137,9 +137,7 @@ Leverage pytest-monitor with 2 building blocks:
 
 ```bash
 (my_conda_env) bash $> export URL=http://my.monitor.org/api/v1
-(my_conda_env) bash $> pytest --remote $URL --tag algo=sqrt \
-                       --db monitor.db
-
+(my_conda_env) bash $> pytest --remote $URL --tag algo=sqrt
 ===================== test session starts ===================
 platform linux -- Python 3.6.8, pytest-4.4.1, py-1.8.0, [...]
 rootdir: /home/user/projects/ospoxp/pytest-monitor
