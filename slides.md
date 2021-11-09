@@ -109,7 +109,7 @@ test_prime[982451653]|test_prime|0.7109375|0.994411130926371|33.8781900405884|33
 test_prime[982451653]|test_prime|0.6953125|0.0812724881534601|0.205749034881592|0.01341024|0.003311496
 ```
 
-- Great, mission acomplished <!-- .element: class="fragment" data-fragment-index="1" -->
+- Great, mission accomplished <!-- .element: class="fragment" data-fragment-index="1" -->
 - Requires to know the sql structure <!-- .element: class="fragment" data-fragment-index="2" -->
 - Does not support parallelism <!-- .element: class="fragment" data-fragment-index="3" -->
 
@@ -159,7 +159,7 @@ from monitor_server_api import Monitor, Field
 import os
 
 def keep_test_prime_982451653(data):
-    return data.variant == 'test_prime_982451653'
+    return data.variant == 'test_prime[982451653]'
 
 mon = Monitor(os.environ['URL'])
 sessions = mon.list_sessions()
